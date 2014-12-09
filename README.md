@@ -5,4 +5,4 @@ A simple script, written in Python 2.7.6, that I'm working on as an intro to pyt
 
 Usage
 ==============================
-> python script.py
+> python USBMaker.py
