@@ -95,7 +95,7 @@ if go in ["go", "Go"]:
 	os.system('diskutil list')
 	ENTER2 = raw_input("Now plug your flash drive back in an press enter: ")
 	os.system('diskutil list')
-	USBID = raw_input("Now type the name of your flash drive on which you want to copy the iso" +'\n' +"Don't forget that the drive you chose will be formatted, so make sure you chose the right one!" +'\n' +"Tip: Your drive id looks something like 'disk2' and is located in the far-right column. Don't include the trailing numbers! ie: 's1' or 's2'")
+	USBID = raw_input("Now type the name of your flash drive on which you want to copy the iso" +'\n' +"Don't forget that the drive you chose will be formatted, so make sure you chose the right one!" +'\n' +"Tip: Your drive id looks something like 'disk2' and is located in the far-right column. Don't include the trailing numbers! ie: 's1' or 's2'" +'\n' +"USB ID: "")
 	#now we need to unmount the disk and transfer the img
 
 	#Make the USBID usable for the unmount command (add /dev/ to the beginning)
