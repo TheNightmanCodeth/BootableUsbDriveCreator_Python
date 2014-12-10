@@ -12,4 +12,4 @@ Usage
 
 About
 ==============================
-I made this script to start learning Python. It's a useful tool for me, and I figured I'd post my source in case any one wants to take a look and learn some python. For now, only mac and linux are supported. Windows support is coming soon. I've included the "dd for windows" binary by Chrysocome and John Newbigin (http://http://www.chrysocome.net/dd) since I will need to utilize it in the future. By then though, I will have a way to just download the binary from their servers so I don't have to re distribute it.
+I made this script to start learning Python. It's a useful tool for me, and I figured I'd post my source in case any one wants to take a look and learn some python. For now, only mac and linux are supported. Windows support is coming soon. I've included the "dd for windows" binary by Chrysocome and John Newbigin (http://www.chrysocome.net/dd) since I will need to utilize it in the future. By then though, I will have a way to just download the binary from their servers so I don't have to re distribute it.
