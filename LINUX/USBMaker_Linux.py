@@ -6,7 +6,7 @@ import os
 import sys
 import time
 
-print "Begin windows script"
+print "Begin linux script"
 time.sleep(1)
 os.system("clear")
 
