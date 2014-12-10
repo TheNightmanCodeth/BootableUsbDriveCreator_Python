@@ -44,6 +44,17 @@ url = "https://github.com/plays2/BootableUsbDriveCreator_Python/"
 #										                                                                 #
 ##########################################################################################################
 
+#Check if USBMaker has been set up
+CWD = os.getcwd()
+FILEPATH = CWD +"/.done.txt"
+SETUP = os.path.exists(FILEPATH)
+if SETUP == False:
+	with open(FILEPATH, 'w') as F:
+		print "Made file"
+		F.write('USBMaker has been set up(:')
+
+	pass
+
 print colors.GREEN +"##########################################################################################################"	
 print "#                                                                                                        #"	
 print "#                    "+colors.WHITE +"Welcome to the fantastical bootable USB drive creator by " +colors.LGREEN +"Plays2"+colors.GREEN +"                     #"
