@@ -1,8 +1,28 @@
-###TODO: 38
+###TODO: 
 #Sorry if I over-comment this, just like to explain for those that want to learn from my code
 #Also install gentoo
 import getpass
 import os
+import sys
+import time
+
+print "Begin windows script"
+time.sleep(1)
+os.system("clear")
+
+#make a cool spinning loading thing :D (might be removed later)
+def spinning_cursor():
+    while True:
+        for cursor in '|/-\\':
+            yield cursor
+
+spinner = spinning_cursor()
+#change this nmber to adjust how long the spinner will spin
+for _ in range(10):
+    sys.stdout.write(spinner.next())
+    sys.stdout.flush()
+    time.sleep(0.1)
+    sys.stdout.write('\b')
 
 #In case my URL canges, I keep a variable up here for easy access
 url = "https://github.com/plays2/BootableUsbDriveCreator_Python/"
@@ -47,25 +67,13 @@ if go in ["go", "Go"]:
 	#first we set up some directories
 	#This is the location of the script
 	WKDIR = os.getcwd()
-	#This is where the converted .img.dmg will go
-	OUTDIR = WKDIR +"/Out/"
-	#This is where the fixed .img will go //I'll change this soon
-	IMGDIR = WKDIR +"/IMG/"
-	#These are some booleans to see if the paths already exist
-	IMGPATHEXISTS = os.path.exists(IMGDIR)
-	OUTPATHEXISTS = os.path.exists(OUTDIR)
+	DDDIR = WKDIR +"/bin/dd"
+	DDEXISTS = os.path.exists(DDDIR)
 
 	#If these directories don't exist, we need to make them
-	if IMGPATHEXISTS == False:
-		print "Setting up img directory..."
-		#Make the directory
-		os.system('mkdir %s' %(IMGDIR))		
-
-	if OUTPATHEXISTS == False:
-		print "Setting up out directory..."
-		#Make the directory
-		os.system('mkdir %s' %(OUTDIR))
-
+	if DDEXISTS == False:
+		print "You're missing the windows DD binary. Please make sure you downloaded all of the correct files"
+		pass
 	#Add the file name to the end of the directory
 	OUTDIRIMG = OUTDIR +"Out.img"	
 	IMGDIRIMG = IMGDIR +"Img.img"
