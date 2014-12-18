@@ -135,5 +135,5 @@ os.system('diskutil unmountDisk %s' %(USBIDUSABLE))
 #OUTUSBID  is the usb we want to use
 OUTUSBID = "/dev/r" +USBID
 #We add the r in the hopes of reducing wait time
-os.system('sudo dd if=%s of=%s bs=1m' %(OUTDIRIMG, OUTUSBID))
+os.system('sudo dd if=%s of=%s bs=1M' %(OUTDIRIMG, OUTUSBID))
 exit();
