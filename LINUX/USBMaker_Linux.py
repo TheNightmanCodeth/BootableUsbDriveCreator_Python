@@ -83,6 +83,6 @@ USBID = raw_input("Now type the name of your flash drive on which you want to co
 #OUTUSBID  is the usb we want to use
 
 #We add the r in the hopes of reducing wait time
-os.system('sudo dd if=%s of=%s bs=1m' %(PATH, USBID))
+os.system('sudo dd if=%s of=%s bs=1M' %(PATH, USBID))
 
 exit();
