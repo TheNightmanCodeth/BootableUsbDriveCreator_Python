@@ -128,6 +128,6 @@ if go in ["go", "Go"]:
 	#OUTUSBID  is the usb we want to use
 	OUTUSBID = "/dev/r" +USBID
 	#We add the r in the hopes of reducing wait time
-	os.system('sudo dd if=%s of=%s bs=1m' %(OUTDIRIMG, OUTUSBID))
+	os.system('cd %s && sudo dd if=%s of=%s bs=1m' %(OUTDIR, OUTDIRIMG, OUTUSBID))
 
 	exit();
