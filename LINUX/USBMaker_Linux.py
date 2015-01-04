@@ -81,8 +81,9 @@ USBID = raw_input("Now type the name of your flash drive on which you want to co
 #And finally, we copy the image to the Flash drive
 #OUTDIRIMG is the img we want to use
 #OUTUSBID  is the usb we want to use
-
+#Move the img so we can use it
+os.system('mv %s ~/USBMaker/')
 #We add the r in the hopes of reducing wait time
-os.system('sudo dd if=%s of=%s bs=1M' %(PATH, USBID))
+os.system('cd ~/USBMaker && sudo dd if=%s of=%s bs=1M' %(PATH, USBID))
 
 exit();
